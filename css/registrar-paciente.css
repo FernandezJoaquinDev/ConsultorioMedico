@@ -1,0 +1,72 @@
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+    background-color: rgb(154, 200, 221);
+    font-family: Arial;
+}
+
+header h1{
+    height: 50px;
+    text-align: center;
+    /* border: 5px solid black; */
+    border-bottom: 3px solid black;
+    padding: 3.5px;
+    background-color: rgb(206, 220, 231);
+    /* font-size: 200%; */
+    margin-top: 0px;
+}
+
+div{
+    border: 3px solid black;
+    text-align: left;
+    width: 400px;
+    background-color: rgb(206, 220, 231);
+    position: relative;
+    left: 480px;
+    top: 70px;
+}
+
+form{
+    margin: 12px 100px;
+    background-color:rgb(206, 220, 231); 
+    
+}
+
+label{
+    background-color: rgb(206, 220, 231);
+}
+
+input{
+    background-color:rgba(226, 222, 222, 0.877);
+}
+
+#boton{
+    margin-left: 130px;
+    background-color: rgb(189, 189, 189);
+    text-decoration: none;
+}
+
+h4{
+    text-align: right;
+}
+
+a{
+    text-align: right;
+    text-decoration: none;
+    color: black;
+    position:absolute ;
+    bottom: 20px; 
+    right: 120px;
+    border: 1px solid black;
+    background-color: rgb(206, 220, 231);
+    padding: 2px;
+}
+
+#boton:hover{
+    background-color: rgb(102, 106, 109);
+}
+
+h4:hover, a:hover{
+    background-color: rgb(172, 176, 179);
+}

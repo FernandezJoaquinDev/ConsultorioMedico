@@ -1,0 +1,84 @@
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+    background-color: rgb(154, 200, 221);
+    font-family: Arial;
+}
+
+header h1{
+    height: 60px;
+    text-align: center;
+    /* border: 5px solid black; */
+    border-bottom: 5px solid black;
+    padding: 3.5px;
+    background-color: rgb(206, 220, 231);
+    font-size: 250%;
+    margin-top: 0px;
+}
+
+header{
+    margin-bottom: 50px;
+}
+
+body{
+    /* border: 5px 5px solid black; */
+    height: 550px;
+}
+
+div{
+    text-align: center;
+    margin-bottom: 33px;
+    border: 4px solid black;
+    font-size: 200%;
+    background-color: rgb(206, 213, 219);
+}
+
+h3{
+    background-color: rgb(206, 213, 219);
+}
+
+body a{
+    text-decoration: none;
+    color: black;
+    background-color: rgb(206, 213, 219)
+}
+
+.foot{
+    text-align: right;
+    margin-right: 5px;
+    height: 45px;
+    background-color: rgb(206, 220, 231);
+    
+}
+
+section p{
+    background-color: rgb(206, 220, 231);
+}
+
+main{
+    margin: 0px 30px 0px 30px;
+    margin-bottom: 70px;
+}
+
+footer{
+    border: 6px solid black;
+    background-color: rgb(206, 220, 231);
+    
+}
+
+#cel{
+    margin-right: 17px;
+}
+
+footer h5, footer b{
+    background-color: rgb(206, 220, 231);
+}
+
+a:hover, h3:hover{
+    background-color: rgb(172, 176, 179);
+}
+
+header h1::after, header h1::before{
+    content: "🩺";
+}
