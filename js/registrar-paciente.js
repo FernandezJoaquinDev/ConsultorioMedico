@@ -10,7 +10,7 @@ class Paciente{
     }
 }
 
-let pacientes = [];
+let pacientes = JSON.parse(localStorage.getItem(`pacientes`));
 
 const agregarPacientes = (event) =>{
     event.preventDefault();
@@ -40,6 +40,30 @@ const agregarPacientes = (event) =>{
 
 //Agregar un navbar
 //Crear la funcion listar pacientes (con modal)
+
+const contenedorT=document.getElementById("contenedorModal");
+
+const listarPacientes = (event) =>{
+    event.preventDefault();
+    // window.location.href="/pages/listadoPacientes.html";
+    // window.location.assign("/pages/listadoPacientes.html")
+    pacientes=JSON.parse(localStorage.getItem(`pacientes`))
+    pacientes.map((item)=>{
+        let columna = document.createElement("div");
+        columna.classList="row";
+        let tarjeta = `<div class="card" style="width: 18rem;">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <a href="#" class="card-link">Card link</a>
+          <a href="#" class="card-link">Another link</a>
+        </div>
+      </div>`;
+      columna.innerHTML=tarjeta;
+      contenedorT.append(columna)
+    })
+}
 //Crear la funcion eliminar pacientes
 //Crear la funcion Modificar pacientes
 //Crear la funcion Buscar pacientes (con filter)

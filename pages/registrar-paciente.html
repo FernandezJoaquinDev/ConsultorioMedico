@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,8 +11,13 @@
 </head>
 <body>
     <header>
-        <h1>Registrar Paciente</h1>
-        <br>
+        <nav class="navbar navbar-light bg-light justify-content-between">
+            <a class="navbar-brand">Consuktorio Medico</a>
+            <form class="form-inline">
+                <button class="btn btn-primary my-2 my-sm-0 mr-2" type="submit">Registrarse</button>
+                <button class="btn btn-secondary my-2 my-sm-0" type="submit">Ingresar</button>
+            </form>
+          </nav>
     </header>
     <main>
         <div class="container">
@@ -28,7 +33,7 @@
                         <button type="button" class="btn btn-secondary btn-lg btn-block " onclick="agregarPacientes(event)">Registrar</button>
                     </div>
                     <div class="d-flex justify-content-between mt-5">
-                        <button type="button" class="btn btn-info btn-lg" onclick="location.href='#'">Pacientes</button>
+                        <button type="button" class="btn btn-info btn-lg" data-bs-toggle="modal" data-bs-target="modalPacientes" onclick="listarPacientes(event)">Pacientes</button>
                         <button type="button" class="btn btn-primary btn-lg" onclick="location.href='/index.html'">Volver</button>
                     </div>
                     <!-- <form>
@@ -53,6 +58,25 @@
                 </div>
             </div>
         </div>
+
+  <!-- Modal -->
+  <div class="modal fade" id="modalPacientes" tabindex="1" aria-labelledby="labelPacientes" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Pacientes</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body" id="contenedorModal">
+          
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+          <button type="button" class="btn btn-primary">Guardar cambios</button>
+        </div>
+      </div>
+    </div>
+  </div>
     </main>
     <footer>
     </footer>
