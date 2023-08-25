@@ -1,0 +1,19 @@
+Cosas faltantes en el Programa:
+
+REGISTRAR PACIENTE
+-Solucionar el close del modal de buscar paciente
+
+GENERAL
+-rehacer la funcionalidad para los Turnos
+-establecer los colores uniformes de los botones
+-diseñar un nav y un foot para todas las paginas
+-añadir la funcionalidad de registrarse y logearse
+
+INICIO
+-cambiar la interfaz completa del inicio con boostrap
+
+REGISTRAR DOCTOR
+-realizar el ingreso de doctores de forma dinamica
+-hacer el crud de doctores
+-Listar doctores en la misma pagina
+

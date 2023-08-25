@@ -34,16 +34,14 @@
                     </div>
                     <div class="d-flex justify-content-between mt-5">
                         <!-- <button type="button" class="btn btn-info btn-lg" data-bs-toggle="modal" data-bs-target="modalPacientes" onclick="listarPacientes(event)">Pacientes</button> -->
-                        <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#exampleModal">
+                        <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#modalPacientes">
                             Pacientes
                           </button>
                           
                           <!-- Modal -->
-                          <div onclick="listarPacientes(event)" class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"  aria-hidden="true" >
-                            <div id="contenedorPrueba">
-
-                            </div>
-                            <!-- <div class="modal-dialog" role="document">
+                          <div  class="modal fade" id="modalPacientes" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"  aria-hidden="true" >
+                            
+                            <div class="modal-dialog" role="document">
                               <div class="modal-content">
                                 <div class="modal-header">
                                   <h5 class="modal-title" id="exampleModalLabel">Lista de Pacientes</h5>
@@ -55,13 +53,40 @@
                                     
                                 </div>
                                 <div class="modal-footer">
-                                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                                  <button type="button" class="btn btn-secondary" onclick="listarPacientes(event)">Actualizar</button>
+                                  <button type="button" class="btn btn-warning" data-dismiss="modal">Cerrar</button>
                                 </div>
                               </div>
-                            </div> -->
+                            </div>
                           </div>
-                        <button type="button" class="btn btn-primary btn-lg" onclick="location.href='/index.html'">Volver</button>
-                    </div>
+
+                          <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#modalBuscar">Buscar</button>
+
+                          <div class="modal fade" id="modalBuscar" tabindex="-1" aria-labelledby="labelBuscar" aria-hidden="true">
+                            <div class="modal-dialog">
+                              <div class="modal-content">
+                                <div class="modal-header">
+                                  <h5 class="modal-title" id="">Buscar Pacientes</h5>
+                                  <button type="button" class="btn-close" data-bs-dismiss="miau" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body" id="contenedorBuscar">
+                                  <form onsubmit="buscarPaciente(event)">
+                                    <div class="form-group">
+                                      <label for="ingreso">Ingrese el nombre</label>
+                                      <input type="text" class="form-control" id="ingreso">
+                                    </div>
+                                  </form>
+                                </div>
+                                <div class="modal-footer">
+                                  <button type="button" class="btn btn-primary">Guardar cambios</button>
+                                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div>
+                            <button type="button" class="btn btn-primary btn-lg" onclick="location.href='/index.html'">Volver</button>
+                          </div>
                 </div>
             </div>
         </div>
