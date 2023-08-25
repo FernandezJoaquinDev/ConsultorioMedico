@@ -12,7 +12,7 @@
 <body>
     <header>
         <nav class="navbar navbar-light bg-light justify-content-between">
-            <a class="navbar-brand">Consuktorio Medico</a>
+            <a class="navbar-brand">Consultorio Medico</a>
             <form class="form-inline">
                 <button class="btn btn-primary my-2 my-sm-0 mr-2" type="submit">Registrarse</button>
                 <button class="btn btn-secondary my-2 my-sm-0" type="submit">Ingresar</button>
@@ -33,28 +33,35 @@
                         <button type="button" class="btn btn-secondary btn-lg btn-block " onclick="agregarPacientes(event)">Registrar</button>
                     </div>
                     <div class="d-flex justify-content-between mt-5">
-                        <button type="button" class="btn btn-info btn-lg" data-bs-toggle="modal" data-bs-target="modalPacientes" onclick="listarPacientes(event)">Pacientes</button>
+                        <!-- <button type="button" class="btn btn-info btn-lg" data-bs-toggle="modal" data-bs-target="modalPacientes" onclick="listarPacientes(event)">Pacientes</button> -->
+                        <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#exampleModal">
+                            Pacientes
+                          </button>
+                          
+                          <!-- Modal -->
+                          <div onclick="listarPacientes(event)" class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"  aria-hidden="true" >
+                            <div id="contenedorPrueba">
+
+                            </div>
+                            <!-- <div class="modal-dialog" role="document">
+                              <div class="modal-content">
+                                <div class="modal-header">
+                                  <h5 class="modal-title" id="exampleModalLabel">Lista de Pacientes</h5>
+                                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                  </button>
+                                </div>
+                                <div class="modal-body row" id="contenedorPacientes">
+                                    
+                                </div>
+                                <div class="modal-footer">
+                                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                                </div>
+                              </div>
+                            </div> -->
+                          </div>
                         <button type="button" class="btn btn-primary btn-lg" onclick="location.href='/index.html'">Volver</button>
                     </div>
-                    <!-- <form>
-                        <label for="apeynom">Apellido y Nombre</label>
-                        <input id="apeynom" type="text">
-                        <br>
-                        <label for="edad">Edad</label>
-                        <input id="edad" type="number" min="1">
-                        <br>
-                        <label for="obraSoc">Obra Social</label>
-                        <input id="obraSoc" type="text">
-                        <br>
-                        <label for="tel">Telefono</label>
-                        <input id="tel" type="phone">
-                        <br>
-                        <label for="direc">Dirección</label>
-                        <input type="text" id="direc">
-                        <br>
-                        <br>
-                        <input id="boton" type="button" value="registrar" onclick="agregarPacientes(event)"> -->
-                    <!-- </form> -->
                 </div>
             </div>
         </div>
