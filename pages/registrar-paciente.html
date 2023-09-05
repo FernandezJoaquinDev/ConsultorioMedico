@@ -32,6 +32,7 @@
                         <input id="edad" type="number" class="form-control" placeholder="Edad" min="1">
                         <input id="obraSoc" type="text" class="form-control" placeholder="Obra Social">
                         <input id="tel" type="tel" class="form-control" placeholder="Telefono">
+                        <input id="dni" type="number" class="form-control" placeholder="DNI" min="1">
                         <input id="direc" type="text" class="form-control" placeholder="Direccion">
                         <textarea class="form-control" id="historia" rows="3" placeholder="Historial"></textarea>
                         <button type="button" class="btn btn-secondary btn-lg btn-block " onclick="agregarPacientes(event)">Registrar</button>
@@ -58,6 +59,7 @@
                                 </div>
                                 <div class="modal-footer">
                                   <button type="button" class="btn btn-secondary" onclick="listarPacientes(event)">Actualizar</button>
+                                  
                                   <button type="button" class="btn btn-warning" data-dismiss="modal">Cerrar</button>
                                 </div>
                               </div>
@@ -65,7 +67,6 @@
                           </div>
 
                           <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#modalBuscar">Buscar</button>
-
                           <div class="modal fade" id="modalBuscar" tabindex="-1" aria-labelledby="labelBuscar" aria-hidden="true">
                             <div class="modal-dialog">
                               <div class="modal-content">
@@ -74,10 +75,10 @@
                                   <button type="button" class="btn-close" data-bs-dismiss="miau" aria-label="Close"></button>
                                 </div>
                                 <div class="modal-body" id="contenedorBuscar">
-                                  <form onsubmit="buscarPaciente(event)">
+                                  <form onsubmit="buscarPaciente()">
                                     <div class="form-group">
-                                      <label for="ingreso">Ingrese el nombre</label>
-                                      <input type="text" class="form-control" id="ingreso">
+                                      <label for="ingreso">Ingrese el DNI</label>
+                                      <input type="number" class="form-control" id="docu" min="1">
                                     </div>
                                   </form>
                                 </div>
@@ -95,24 +96,23 @@
             </div>
         </div>
 
-  <!-- Modal -->
-  <div class="modal fade" id="modalPacientes" tabindex="1" aria-labelledby="labelPacientes" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Pacientes</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        <div class="modal fade" id="modalPac" tabindex="-1" aria-labelledby="modalPac" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                ...
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="modal-body" id="contenedorModal">
-          
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-          <button type="button" class="btn btn-primary">Guardar cambios</button>
-        </div>
-      </div>
-    </div>
-  </div>
     </main>
     <footer>
     </footer>

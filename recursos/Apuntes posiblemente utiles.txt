@@ -1,0 +1,19 @@
+AddEventListener{
+para llamar a una funcion desde nuestro documento podemos hacerlo con onclick="funcion(event)" o podemos usar 
+eventlistener de la siguiente forma
+
+Ej:
+document.querySelector("#idDeEtiqueta").addEventListener("tipoDeAccion (ej en un form es submit)", nombreDeLaFuncion);
+
+}
+
+operador spread{
+
+si queremos igualar dos arrays, podemos usar el operador spread (...) de la siguiente forma:
+
+arreglo1=[], arreglo2=[item,item]
+
+arreglo1 = [...arreglo2]
+
+asi nos queda arreglo1 = [item,item]
+}

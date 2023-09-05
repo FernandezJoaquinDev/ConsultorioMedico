@@ -2,6 +2,7 @@ Cosas faltantes en el Programa:
 
 REGISTRAR PACIENTE
 -Solucionar el close del modal de buscar paciente
+-solucionar el modal para modificar paciente
 
 GENERAL
 -rehacer la funcionalidad para los Turnos
