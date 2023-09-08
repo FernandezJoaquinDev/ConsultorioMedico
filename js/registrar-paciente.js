@@ -6,6 +6,7 @@ class Paciente{
         this.obrasocial=obrasocial;
         this.telefono=telefono;
         this.dni=dni;
+        this.direccion=direccion;
         this.historial=historial;
         
     }
@@ -99,17 +100,73 @@ let indice = pacientes.findIndex((item)=>{
 //Crear la funcion Modificar pacientes
 //Crear la funcion Buscar pacientes (con filter)
 
+let encontrado;
 const buscarPaciente = () =>{
     event.preventDefault();
   let docuP=document.getElementById("docu").value
-   let encontrado = pacientes.findIndex((item)=>{
+   encontrado = pacientes.findIndex((item)=>{
         return item.dni==docuP;
     })
-    if(encontrado>-1){
-        abrirModal()
-    }
-}
+    console.log(encontrado)
+     if(encontrado>-1){
+         let contenido = document.getElementById("contenedorBuscar");
+         contenido.innerHTML=""
+         let infoPac = `<form> 
+         <div class="form-group row">
+         <label for="apeynom" class="col-sm-2 col-form-label">Nombre:</label>
+         <div class="col-sm-10">
+         <input type="text" class="form-control" id="nomMod" value="${pacientes[encontrado].apeynom}">
+         </div>
+         <label for="apeynom" class="col-sm-2 col-form-label">edad:</label>
+         <div class="col-sm-10">
+         <input type="text" class="form-control" id="edadMod" value="${pacientes[encontrado].edad}">
+         </div>
+         <label for="apeynom" class="col-sm-2 col-form-label">O.S:</label>
+         <div class="col-sm-10">
+         <input type="text" class="form-control" id="osMod" value="${pacientes[encontrado].obrasocial}">
+         </div>
+         <label for="apeynom" class="col-sm-2 col-form-label">tel:</label>
+         <div class="col-sm-10">
+         <input type="text" class="form-control" id="telMod" value="${pacientes[encontrado].telefono}">
+         </div>
+         <label for="apeynom" class="col-sm-2 col-form-label">DNI:</label>
+         <div class="col-sm-10">
+         <input type="text" class="form-control" id="dniMod" value="${pacientes[encontrado].dni}">
+         </div>
+         <label for="apeynom" class="col-sm-2 col-form-label">direc:</label>
+         <div class="col-sm-10">
+         <input type="text" class="form-control" id="direcMod" value="${pacientes[encontrado].direccion}">
+         </div>
+         <textarea class="form-control" id="historiaMod" value="${pacientes[encontrado].historial}"></textarea>
+         </div>
 
-const abrirModal= ()=>{
-    modalPac.show();
-}
+         </form>`
+         contenido.innerHTML=infoPac;
+        }else{
+            let contenido = document.getElementById("contenedorBuscar");
+            contenido.innerHTML=""
+            let notFound= `<div class="card">
+            <div class="card-body">
+            Paciente No Encontrado
+            </div>
+            </div>`
+            contenido.innerHTML=notFound;
+        }
+        
+    }
+    const modifPacientes = (event)=>{
+        
+        let nombMod = document.getElementById("nomMod").value;
+        let edMod = document.querySelector("#edadMod").value;
+        let obsMod = document.getElementById("osMod").value;
+        let telMod = document.getElementById("telMod").value;
+        let docuMod = document.getElementById("dniMod").value;
+        let direcMod = document.getElementById("direcMod").value;
+        let areaMod = document.getElementById("historiaMod").value;
+        pacientes.splice(encontrado,1,new Paciente(new Date().getTime(),nombMod,edMod,obsMod,telMod,docuMod,direcMod,areaMod))        
+        localStorage.setItem('pacientes', JSON.stringify(pacientes));
+    }
+
+//     const abrirModal= ()=>{
+//     modalPac.show();
+// }
