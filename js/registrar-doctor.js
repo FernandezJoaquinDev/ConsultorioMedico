@@ -11,7 +11,7 @@ class Doctor {
 //Crear la funcion agregar doctor con localstorage
 //Hacer CRUD de doctores
 
-let doctores = [];
+let doctores = JSON.parse(localstorage.getItem(`doctores`)) || [];
 
 const añadirDoc = (event)=>{
     let nom = document.getElementById("apynomD");
@@ -23,7 +23,7 @@ const añadirDoc = (event)=>{
     
     if(nom!="" && ed!=0 && spec!="" && tel!=0 && direcc!=""){
         
-        doctores.push(new Date().getTime(), nom, edad, spec, tel, direcc);
+        doctores.push(new Doctor(new Date().getTime(), nom, edad, spec, tel, direcc));
         console.log("Ingreso exitoso");
         document.getElementById("apeynomD").value="";
         document.getElementById("edadD").value="";
@@ -36,3 +36,28 @@ const añadirDoc = (event)=>{
 
     localStorage.setItem('doctores', JSON.stringify(doctores));
 }
+
+const listado = document.getElementById("listado");
+const listarDoc = ()=>{
+
+    doctores.forEach((item) => {
+        let columna = document.createElement("div");
+        columna.className="col";
+        let tarjeta = `<div class="card" style="width: 18rem;">
+        <img class="card-img-top" src="..." alt="Card image cap">
+        <div class="card-body">
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        </div>
+      </div>`;
+      columna.innerHTML=tarjeta;
+      listado.appendChild(columna);
+    });
+
+}
+
+
+listarDoc();
+
+
+
+

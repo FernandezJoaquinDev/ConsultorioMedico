@@ -19,12 +19,22 @@
                         <div class="d-flex flex-row-reverse">
                             <button class="btn btn-primary my-2 my-sm-0 mr-2" type="submit">Registrarse</button>
                             <button class="btn btn-secondary my-2 my-sm-0 mr-2" type="submit">Ingresar</button>
+                            <button class="btn btn-warning my-2 my-sm-0 mr-2" type="submit" onclick="location.href=`/pages/nuevoDoc.html`">Doctor Nuevo</button>
                         </div>
              </div>
             </nav>
     </header>
     <main>
-        <div class="doc">
+
+        <div class="container">
+            <div class="row my-3">
+                <h1>Doctores</h1>
+            </div>
+        </div>
+        <div class="row row-cols-1 row-cols-md-3 g-4" id="listado">
+
+        </div>
+        <!-- <div class="doc">
             <img src="/assets/doc diego.png" alt="doc_valero">
             <h3>Dr. Diego F. Valero</h3>
             <p>
@@ -34,7 +44,7 @@
                 <br>
                 <b id="disponible">Disponible</b>
             </p>
-        </div>
+        </div> -->
     </main>
     <footer>
         <h4><a href="/index.html">Volver</a></h4>

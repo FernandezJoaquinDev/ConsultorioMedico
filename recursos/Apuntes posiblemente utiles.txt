@@ -17,3 +17,5 @@ arreglo1 = [...arreglo2]
 
 asi nos queda arreglo1 = [item,item]
 }
+
+[git reset --hard para desechar los cambios que no fueron commiteados en el proyecto]
