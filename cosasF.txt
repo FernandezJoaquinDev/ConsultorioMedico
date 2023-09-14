@@ -2,7 +2,7 @@ Cosas faltantes en el Programa:
 
 REGISTRAR PACIENTE
 -Solucionar el close del modal de buscar paciente
--solucionar el modal para modificar paciente
+-solucionar el modal para modificar paciente 
 
 GENERAL
 -rehacer la funcionalidad para los Turnos
@@ -18,3 +18,8 @@ REGISTRAR DOCTOR
 -hacer el crud de doctores
 -Listar doctores en la misma pagina
 
+IMAGENES
+-cloudinary para la integracion de las imagenes
+
+ERRORES
+-la funcion listarDoc() no reconoce el div "listado" como parte del documento html
