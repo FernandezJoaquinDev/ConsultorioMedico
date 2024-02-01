@@ -5,6 +5,9 @@ eventlistener de la siguiente forma
 Ej:
 document.querySelector("#idDeEtiqueta").addEventListener("tipoDeAccion (ej en un form es submit)", nombreDeLaFuncion);
 
+variable.addEventListener("click",(evt*)=>{console.log(e)})
+
+*cuando queremos referenciar al objeto mismo usamos e(evt,event,etc) dado que this no funciona en funciones flecha
 }
 
 operador spread{
@@ -19,3 +22,5 @@ asi nos queda arreglo1 = [item,item]
 }
 
 [git reset --hard para desechar los cambios que no fueron commiteados en el proyecto]
+
+window.location.href = nos da la ruta de nuestro archivo
