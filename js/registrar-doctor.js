@@ -40,22 +40,25 @@ const añadirDoc = (event)=>{
 
     localStorage.setItem('doctores', JSON.stringify(doctores));
     console.log(nom)
+    // listarDoc();
 }
 
 
-const listadoD = document.querySelector("#nose");
+const listadoD = document.getElementById("docsL");
 
-const listarDoc = ()=>{
+const listarDoc = (event)=>{
+     listadoD.innerHTML='';
     doctores.forEach((item) => {
         let columna = document.createElement("div");
         columna.className="col";
         let tarjeta = `<div class="card" style="width: 18rem;">
         <img class="card-img-top" src="${item.img}" alt="Card image cap">
-        <div class="card-body">
+        <div class="card-body d-flex flex-direction-colum justify-content-center aling-items-stretch">
         <span>${item.apeynom}</span>
         <span>${item.especialidad}</span>
         <span>${item.tel}</span>
         <span>${item.direc}</span>
+        <input type="button" value="eliminar" onclick="eliminarDoc(${item.id})")
         </div>
       </div>`;
       columna.innerHTML=tarjeta;
@@ -65,7 +68,31 @@ const listarDoc = ()=>{
 }
 
 
+//eliminar doctor
+const eliminarDoc = (id)=>{
+doctores = JSON.parse(localStorage.getItem(`doctores`));
 
+let doctoresN=doctores.filter((doc)=>{
+    return doc.id!==id;
+})
+
+let indice = doctores.findIndex((item)=> item.id===id);
+    // return item.id==id;
+// })
+
+    let validar = confirm(`desea eliminar a ${doctores[indice].apeynom}?`)
+
+    if(validar){
+        doctores = [...doctoresN];
+        // doctores = doctoresN;
+        localStorage.setItem('doctores',JSON.stringify(doctores))
+        alert("Doctor Eliminado");
+    }else{
+        alert("se cancelo la operacion");
+    }
+
+    listarDoc();
+}
 
 listarDoc();
 
