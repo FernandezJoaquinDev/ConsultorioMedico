@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/login.css">
+    <title>LogIn</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-light bg-light">
+            <div class="container-fluid">
+                <div>
+                    <h3 id="titulo">Consultorio Medico</h3>
+                </div>
+              <div>
+                <button type="button" class="btn btn-secondary btn-lg btn-block" onclick="location.href='/index.html'">Volver</button>
+              </div>
+            </div>
+        </nav>
+    </header>
+    <main class="m-5">
+        <div class=" d-flex justify-content-center flex-column">
+            
+            <div class="flex-column align-items-cente d-flex">
+                <input type="text" id="userU" placeholder="Nombre de Usuario" class="input-group-text">
+                <input type="text" id="passU" placeholder="Contraseña" class="input-group-text">
+                <button type="button" class="btn btn-secondary btn-lg btn-block" onclick="ingresar(event)">Ingresar</button>
+            </div>
+            <div class="mt-4">
+                <button type="button" id="modalRegistro" class="btn btn-warning btn-lg btn-block">Registrarse</button>
+            </div>
+            <div class="modal" id="ventanaModal">
+                <div class="modal-content">
+                    <div class="d-flex justify-content-between mb-3">
+                        <h3>Nuevo Usuario</h3>
+                        <button type="button" class="btn btn-secondary" id="btnCerrar">Cerrar</button>
+                    </div>
+                    <div class="container">
+                                <div class="form-grouo d-flex flex-column">
+                                    <input type="text" id="apeynomb" placeholder="Nombre y apellido" class="input-group-text">
+                                    <input type="number" id="docum" placeholder="N° de Documento" class="input-group-text">
+                                    <input type="text" id="usuario" placeholder="Nombre de usuario" class="input-group-text">
+                                    <input type="text" id="contra" placeholder="Contraseña" class="input-group-text">
+                                    <button type="button" class="btn btn-primary btn-block btn-lg" id="btnReg" onclick="agregarUsuario(event)">Registrar</button>
+                                </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="/js/login.js"></script>
+</body>
+</html>
