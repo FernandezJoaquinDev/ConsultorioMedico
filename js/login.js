@@ -12,8 +12,8 @@ class Usuario{
 const usuarios =JSON.parse(localStorage.getItem(`usuarios`)) || [];
 
 //enlace al inicio con el nombre del consultorio
-let titulo = document.querySelector("#titulo");
-titulo.addEventListener("click",()=>{location.href="/index.html"});
+// let titulo = document.querySelector("#titulo");
+// titulo.addEventListener("click",()=>{location.href="/index.html"});
 
 //funcionalidades del modal
 let abrirModal=document.getElementById("modalRegistro");
@@ -29,7 +29,8 @@ cerrarM.addEventListener("click",()=>{
     modal.style.display='none';
 })
 
-let usuarioCargado = false;
+
+//probar un boton para salir de la sesion
 const clave = 12345;
 
 
@@ -72,8 +73,9 @@ const limpiar = ()=>{
 
 let usuarioIn = document.getElementById("userU");
 let contraIn = document.getElementById("passU");
+let contenidoI =document.getElementById("contenido");
 
-const ingresar = (event)=>{
+const ingresar = (evt)=>{
     let encontrado = usuarios.findIndex((usuario)=>{
         return usuario.user  === usuarioIn.value;
     })
@@ -81,7 +83,11 @@ const ingresar = (event)=>{
        
         if(usuarios[encontrado].pass === contraIn.value){
             alert(usuarios[encontrado].apeyNomU +" se ha conectado");
+            let usuarioCargado = localStorage.getItem(`cargado`);
             usuarioCargado = true;
+            localStorage.setItem(`cargado`,JSON.stringify(usuarioCargado));
+            let nombreUsuarioC = usuarios[encontrado].apeyNomU;
+            localStorage.setItem(`usuarioActual`,nombreUsuarioC);
             limpiar();
             volverInicio();
         }else{
