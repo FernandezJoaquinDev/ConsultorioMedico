@@ -39,7 +39,7 @@ const añadirDoc = (event)=>{
     }
 
     localStorage.setItem('doctores', JSON.stringify(doctores));
-    console.log(nom)
+    // console.log(nom)
     // listarDoc();
 }
 
@@ -52,13 +52,13 @@ const listarDoc = (event)=>{
         let columna = document.createElement("div");
         columna.className="col";
         let tarjeta = `<div class="card" style="width: 18rem;">
-        <img class="card-img-top" src="${item.img}" alt="Card image cap">
-        <div class="card-body d-flex flex-direction-colum justify-content-center aling-items-stretch">
-        <span>${item.apeynom}</span>
+        <img class="card-img-top" src="${item.img}" alt="Imagen del doctor" >
+        <div class="card-body d-flex flex-column align-items-center">
+        <span>${item.apeynom.toUpperCase()}</span>
         <span>${item.especialidad}</span>
         <span>${item.tel}</span>
         <span>${item.direc}</span>
-        <input type="button" value="eliminar" onclick="eliminarDoc(${item.id})")
+        <button class="btn btn-secondary my-2 my-sm-0 mr-2" onclick="eliminarDoc(${item.id})" type="submit">Eliminar</button>
         </div>
       </div>`;
       columna.innerHTML=tarjeta;
