@@ -24,3 +24,9 @@ asi nos queda arreglo1 = [item,item]
 [git reset --hard para desechar los cambios que no fueron commiteados en el proyecto]
 
 window.location.href = nos da la ruta de nuestro archivo
+
+eventos:
+
+-se puede agregar un evento cuando la pagina carga, para que se ejecute al cargar todo
+
+	window.addEventListener("load",()=>{accion requerida})
