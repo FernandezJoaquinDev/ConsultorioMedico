@@ -13,7 +13,6 @@ if(usuarioCargado){
     btnsalir.style.display="inline"
     btningreso.style.display="none"
     nombreC.innerHTML=`<p>${usuarioA.toUpperCase()}</p>`;
-}else{
 }
 
 const cerrarSesion = (event)=>{

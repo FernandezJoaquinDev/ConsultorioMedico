@@ -45,8 +45,18 @@ const agregarPacientes = (event) =>{
 }
 
 
+// const abrirmdlPacientes = (event)=>{
+//     ventanaMdlPacientes.style.display = "inline";
+//     listarPacientes();
+// }
+// const cerrarMdl = ()=>{
+//     ventanaMdlPac.style.display = "none";
+// }
 
+// let ventanaMdlPacientes = document.getElementById("ventanaMdlPac")
+// let abrirMPac = document.getElementById("openModalPac");
 const contenedorT=document.getElementById("contenedorPacientes");
+
 
 //Crear la funcion listar pacientes (con modal)
 const listarPacientes = (event) =>{
@@ -67,6 +77,7 @@ const listarPacientes = (event) =>{
           </div>
           <button type="button" class="btn btn-danger" onclick="eliminarPacientes(${item.id})">X</button>
           </div>`;
+
           
           columna.innerHTML=tarjeta;
           contenedorT.append(columna)
