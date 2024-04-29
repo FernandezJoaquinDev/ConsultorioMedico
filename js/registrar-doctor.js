@@ -96,6 +96,10 @@ let indice = doctores.findIndex((item)=> item.id===id);
 
 listarDoc();
 
+let usuarioA = localStorage.getItem(`usuarioActual`);
+const lugarUsuarioND = document.getElementById("usuarioActND");    
+lugarUsuarioND.innerHTML=`<p>${usuarioA.toUpperCase()}</p>`;
+
 
 
 

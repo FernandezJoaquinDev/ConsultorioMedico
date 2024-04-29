@@ -178,6 +178,11 @@ const buscarPaciente = () =>{
         localStorage.setItem('pacientes', JSON.stringify(pacientes));
     }
 
+    let usuarioA = localStorage.getItem(`usuarioActual`);
+    const lugarUsuario = document.getElementById("usuarioAct")    
+    lugarUsuario.innerHTML=`<p>${usuarioA.toUpperCase()}</p>`
+    
+
 //     const abrirModal= ()=>{
 //     modalPac.show();
 // }

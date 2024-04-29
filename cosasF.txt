@@ -14,6 +14,7 @@ INICIO
 
 REGISTRAR DOCTOR
 -hacer el crud de doctores
+-corregir el muestreo del nombre del usuario actual
 
 IMAGENES
 -cloudinary para la integracion de las imagenes

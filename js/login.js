@@ -82,7 +82,7 @@ const ingresar = (evt)=>{
     if(encontrado > -1){
        
         if(usuarios[encontrado].pass === contraIn.value){
-            alert(usuarios[encontrado].apeyNomU +" se ha conectado");
+            alert(usuarios[encontrado].apeyNomU.toUpperCase() +" se ha conectado".toUpperCase());
             let usuarioCargado = localStorage.getItem(`cargado`);
             usuarioCargado = true;
             localStorage.setItem(`cargado`,JSON.stringify(usuarioCargado));
