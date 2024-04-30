@@ -18,8 +18,7 @@
                             <a class="navbar-brand ">Consultorio Medico</a>
                 </div>
                         <div class="d-flex flex-row-reverse">
-                            <button class="btn btn-primary my-2 my-sm-0 mr-2" type="submit">Registrarse</button>
-                            <button class="btn btn-secondary my-2 my-sm-0 mr-2" type="submit">Ingresar</button>
+                            <div id="usuarioActND"></div>
                             <button class="btn btn-warning my-2 my-sm-0 mr-2" type="submit" onclick="location.href=`/pages/nuevoDoc.html`">Doctor Nuevo</button>
                         </div>
              </div>
@@ -37,9 +36,11 @@
 
         </div>
         
-    </main>
+    </main> 
     <footer>
-        <h4><a href="/index.html">Volver</a></h4>
+        <div class="d-flex flex-row-reverse mr-4 mt-5">
+            <button type="button" class="btn btn-primary btn-lg" onclick="location.href='/index.html'">Volver</button>
+        </div>
     </footer>
     <script src="/js/lista-docs.js"></script>
     <script src="/js/registrar-doctor.js"></script>

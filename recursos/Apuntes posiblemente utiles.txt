@@ -30,3 +30,26 @@ eventos:
 -se puede agregar un evento cuando la pagina carga, para que se ejecute al cargar todo
 
 	window.addEventListener("load",()=>{accion requerida})
+
+-crear modal con js
+
+	en html: 
+		<button id="abrirModal">Abrir Modal</button>
+		<div id="ventanaModal" class="modal">
+   			 <div class="modal-content">
+       			 <button id="cerrar">Cerrar</button>
+       			 <h2>Ventana modal</h2>
+    		</div>
+ 		 </div>
+	
+	en css:
+		.modal {
+  			display: none;
+  			position: fixed;
+			z-index: 1;
+		}
+
+	en js:
+		var modal = document.getElementById("ventanaModal");
+		var abrirmdl = document.getElementById("abrirModal");
+		let btnCls = document.getElementById("cerrar");

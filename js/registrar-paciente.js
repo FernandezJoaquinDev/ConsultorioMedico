@@ -45,8 +45,18 @@ const agregarPacientes = (event) =>{
 }
 
 
+// const abrirmdlPacientes = (event)=>{
+//     ventanaMdlPacientes.style.display = "inline";
+//     listarPacientes();
+// }
+// const cerrarMdl = ()=>{
+//     ventanaMdlPac.style.display = "none";
+// }
 
+// let ventanaMdlPacientes = document.getElementById("ventanaMdlPac")
+// let abrirMPac = document.getElementById("openModalPac");
 const contenedorT=document.getElementById("contenedorPacientes");
+
 
 //Crear la funcion listar pacientes (con modal)
 const listarPacientes = (event) =>{
@@ -67,6 +77,7 @@ const listarPacientes = (event) =>{
           </div>
           <button type="button" class="btn btn-danger" onclick="eliminarPacientes(${item.id})">X</button>
           </div>`;
+
           
           columna.innerHTML=tarjeta;
           contenedorT.append(columna)
@@ -166,6 +177,11 @@ const buscarPaciente = () =>{
         pacientes.splice(encontrado,1,new Paciente(new Date().getTime(),nombMod,edMod,obsMod,telMod,docuMod,direcMod,areaMod))        
         localStorage.setItem('pacientes', JSON.stringify(pacientes));
     }
+
+    let usuarioA = localStorage.getItem(`usuarioActual`);
+    const lugarUsuario = document.getElementById("usuarioAct")    
+    lugarUsuario.innerHTML=`<p>${usuarioA.toUpperCase()}</p>`
+    
 
 //     const abrirModal= ()=>{
 //     modalPac.show();
